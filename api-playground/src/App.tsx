@@ -1,13 +1,15 @@
 import * as React from 'react';
 import './App.css';
-import Example from './components/navbar';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 
 function App() {
   return (
     <div>
-    <Example/>
+    <Navbar/>
     <Sidebar/>
+    <Footer/>
     </div>
   );
 }

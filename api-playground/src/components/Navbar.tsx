@@ -10,7 +10,7 @@ const navigation = [
   { name: "About", href: "#" },
 ];
 
-export default function Example() {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ export default function Example() {
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Perfios</span>
               <img className="h-20 w-auto" src={logo} alt="" />
             </a>
           </div>
@@ -41,7 +41,7 @@ export default function Example() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="text-lg font-semibold leading-6 text-gray-900"
               >
                 {item.name}
               </a>
@@ -50,7 +50,7 @@ export default function Example() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
               href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-lg font-semibold leading-6 text-gray-900"
             >
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
@@ -66,10 +66,10 @@ export default function Example() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Perfios</span>
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  src={logo}
                   alt=""
                 />
               </a>
