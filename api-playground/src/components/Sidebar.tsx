@@ -3,11 +3,27 @@ import { ArrowDownCircleIcon , ArrowRightCircleIcon} from "@heroicons/react/24/o
 
 
 export default function Sidebar() {
+  
+
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+
+  const[text,setText]= useState("Hello , Welcome to Api-Playground !");
+
+  const onHere=() =>{
+
+    setText("You Selected Api 1")
+
+  };
+  const onHere2=() =>{
+
+    setText("You Selected Api 2")
+
+  };
 
   const handleClick = (index: number) => {
     setActiveAccordion(activeAccordion === index ? null : index);
   };
+
   return (
     <>
       <div className="flex flex-row mt-16">
@@ -42,7 +58,7 @@ export default function Sidebar() {
               {activeAccordion === 1 && (
                 <div className="px-4 py-2 bg-white">
                   
-                  <button className="w-full px-4 py-2 text-left text-lg font-medium">
+                  <button onClick={onHere} className="w-full px-4 py-2 text-left text-lg font-medium">
                   <ArrowRightCircleIcon className="h-6 w-6 text-gray-500 float-right" />
                 <h1>This Will Help You create Order</h1>
                 
@@ -63,7 +79,8 @@ export default function Sidebar() {
               </button>
               {activeAccordion === 2 && (
                 <div className="px-4 py-2 bg-white">
-                <button className="w-full px-4 py-2 text-left text-lg font-medium">
+                <button onClick={()=>onHere2()} className="w-full px-4 py-2 text-left text-lg font-medium">
+                <ArrowRightCircleIcon className="h-6 w-6 text-gray-500 float-right" />
               <h1>This Will Help You create Order</h1>
             </button>
               </div>
@@ -446,8 +463,23 @@ export default function Sidebar() {
           </a>
         </div>
         <div className="flex flex-col md:flex-row w-11/12">
-          <div className="column-2 w-full md:w-6/12 h-full border-2 border-dashed md:mx-2 my-2 rounded-md"></div>
-          <div className="column-3 w-full md:w-5/12 h-full border-2 border-dashed md:mx-2 my-2 rounded-md"></div>
+
+
+
+
+          <div className="column-2 w-full md:w-6/12 h-full border-2 border-dashed md:mx-2 my-2 rounded-md">
+             <h1 className="font-mono text-2xl font-bold m-4">{text}</h1>
+          </div>
+
+
+
+
+
+          <div className="column-3 w-full md:w-6/12 h-full border-2 border-dashed md:mx-2 my-2 rounded-md">
+            <h1  className="font-mono text-xl underline m-4">Language</h1>
+            <h3 className="m-4">{text}</h3>
+            <h2 className="italic m-4">Base url : https://www.perfios.com/</h2>
+          </div>
         </div>
       </div>
     </>
