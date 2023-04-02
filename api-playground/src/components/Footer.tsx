@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "./perfios.png";
 
-export default function Footer() {
+export default function Footer():JSX.Element {
   return (
     <div><footer className="text-gray-600 body-font">
     <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">

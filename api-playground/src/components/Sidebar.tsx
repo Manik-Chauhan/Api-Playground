@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { ArrowDownCircleIcon , ArrowRightCircleIcon} from "@heroicons/react/24/outline";
 
 
-export default function Sidebar() {
+export default function Sidebar():JSX.Element {
   
 
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
 
-  const[text,setText]= useState("Hello , Welcome to Api-Playground !");
+  const[text,setText]= useState<string | null>("Hello , Welcome to Api-Playground !");
 
   const onHere=() =>{
 

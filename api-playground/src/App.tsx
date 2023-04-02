@@ -9,7 +9,7 @@ import {
   Link
 } from "react-router-dom";
 
-function App() {
+function App():JSX.Element {
   return (
     <div>
     <Navbar/>
